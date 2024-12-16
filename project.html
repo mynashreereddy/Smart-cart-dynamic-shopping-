@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCart: Dynamic Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SmartCart</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search..."  >
+            <button onclick="searchFunction()">Search </button>
+        </div>
+        <div class=" login">
+            
+            <button onclick="loginfunction()">login</button> 
+             
+        </div>
+    
+
+        <div class="icon">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <nav class="menu">
+            <a href="#" alt="Home"></a>
+        </nav>
+        
+        <header>
+            <div class="container">
+                <h1><Menu></Menu></h1>
+                  <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </header>
+    <li class="menu-category">
+        <a href="#" class="menu-title">Men's</a>
+
+        <ul class="dropdown-list">
+
+          <li class="dropdown-item">
+            <a href="#">Shirt</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Shorts & Jeans</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Safety Shoes</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Wallet</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Women's</a>
+
+        <ul class="dropdown-list">
+
+          <li class="dropdown-item">
+            <a href="#">Dress & Frock</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Earrings</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Necklace</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Makeup Kit</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Jewelry</a>
+
+        <ul class="dropdown-list">
+
+          <li class="dropdown-item">
+            <a href="#">Earrings</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Couple Rings</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Necklace</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Bracelets</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Perfume</a>
+
+        <ul class="dropdown-list">
+
+          <li class="dropdown-item">
+            <a href="#">Clothes Perfume</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Deodorant</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Flower Fragrance</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Air Freshener</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Blog</a>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Hot Offers</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<div class="mobile-bottom-navigation">
+
+  <button class="action-btn" data-mobile-menu-open-btn>
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+
+  <button class="action-btn">
+    <ion-icon name="bag-handle-outline"></ion-icon>
+
+    <span class="count">0</span>
+  </button>
+
+  <button class="action-btn">
+    <ion-icon name="home-outline"></ion-icon>
+  </button>
+
+  <button class="action-btn">
+    <ion-icon name="heart-outline"></ion-icon>
+
+    <span class="count">0</span>
+  </button>
+
+  <button class="action-btn" data-mobile-menu-open-btn>
+    <ion-icon name="grid-outline"></ion-icon>
+  </button>
+
+</div>
+
+    <div class="cart-info">
+        <button id="cart-toggle">Cart (0)</button>
+    </div>
+    <div class="product-list">
+        <div class="product" id="product-1">
+            <img src="smartcart.webp" alt="Product 1" WIDTH="200" HEIGHT="150">
+            <h3>Product 1</h3>
+            <p>$25.00</p>
+            <button class="add-to-cart" data-product-id="1" data-product-name="Product 1" data-product-price="25.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-2">
+            <img src="SMARTCART2.jpg" alt="Product 2" WIDTH="200" HEIGHT="150">
+            <h3>Product 2</h3>
+            <p>$35.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 2" data-product-price="35.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-3">
+            <img src="SMARTCART2.jpg" alt="Product 3" WIDTH="200" HEIGHT="150">
+            <h3>Product 3</h3>
+            <p>$35.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 3" data-product-price="45.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-4">
+            <img src="smartcart.webp" alt="Product 1" WIDTH="200" HEIGHT="150">
+            <h3>Product 4</h3>
+            <p>$35.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 4" data-product-price="55.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-5">
+            <img src="smartcart.webp" alt="Product 5" WIDTH="200" HEIGHT="150">
+            <h3>Product 4</h3>
+            <p>$60.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 5" data-product-price="60.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-5">
+            <img src="smartcart.webp" alt="Product 1" WIDTH="200" HEIGHT="150">
+            <h3>Product 5</h3>
+            <p>$20.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 5" data-product-price="20.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-6">
+            <img src="smartcart.webp" alt="Product 1" WIDTH="200" HEIGHT="150">
+            <h3>Product 6</h3>
+            <p>$80.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 4" data-product-price="80.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-7">
+            <img src="smartcart.webp" alt="Product 7" WIDTH="200" HEIGHT="150">
+            <h3>Product 7</h3>
+            <p>$75.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 7" data-product-price="75.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-8">
+            <img src="smartcart.webp" alt="Product 8" WIDTH="200" HEIGHT="150">
+            <h3>Product 8</h3>
+            <p>$40.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 8" data-product-price="40.00">Add to Cart</button>
+        </div>
+        <div class="product" id="product-4">
+            <img src="smartcart.webp" alt="Product 1" WIDTH="200" HEIGHT="150">
+            <h3>Product 4</h3>
+            <p>$35.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Product 4" data-product-price="55.00">Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <div class="cart-total">
+                <p>Total: $<span id="total-price">0.00</span></p>
+            </div>
+            <button id="checkout-btn">Checkout</button>
+            <button id="close-cart">Close</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
